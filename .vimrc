@@ -1,5 +1,9 @@
 " ~/.vimrc
 
+" Pathogen related settings and commands:
+" This needs to come before any commands that rely on a Pathogen-installed plugin.
+execute pathogen#infect()
+
 set nocompatible " Disable Vi backwards-compatibility, allowing full range of Vim features.
 
 " Code / syntax settings:
@@ -23,4 +27,11 @@ set autoindent " Default indentation strategy: automatically indent new lines to
 " Mouse / cursor settings:
 set mouse=a " Better mouse support for terminal Vim (elucidate).
 
-" colorscheme solarized " Set the color scheme to Solarized Dark " commented out until Solarized is downloaded.
+" Color settings:
+set background=dark   " Dark background, used for Solarized.
+set t_Co=256          " Set terminal to use 256 colors, which Solarized requires.
+colorscheme solarized " Set the color scheme to Solarized Dark
+
+
+" Rust-specific:
+" let g:rustfmt_autosave = 1 " Automatically run rustfmt after every buffer write. " Commented out due to not working.
