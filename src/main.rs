@@ -1,12 +1,10 @@
 // src/main.rs
 extern crate toml;
 
-use std::fmt;
 use std::fs::File;
 use std::io::prelude::*;
+use std::path::PathBuf;
 use std::process::{Command, Output};
-
-use toml::Value;
 
 const PLUGIN_CMDS: &'static str = "/Users/eric/projects/dotfiles/plugins.toml";
 
@@ -25,10 +23,11 @@ fn main() {
         let p_tbl = plugin.as_table().unwrap();
         let name = p_tbl.get("name").unwrap().as_str().unwrap();
         let repo = p_tbl.get("repo").unwrap().as_str().unwrap();
-        // TODO use Path module here.
         // TODO get plugin name from .git URL.
-        let mut cmd = format!("{cmd} {repo} {dir}{name}", cmd=command, repo=repo, dir=vundle_dir,
-                              name=name);
+        let mut path = PathBuf::new();
+        path.push(vundle_dir);
+        path.push(name);
+        let cmd = format!("{} {} {:?}", command, repo, path);
         println!("Cloning plugin {} (via running {})", name, cmd);
         let output: Output = Command::new("sh")
                                      .arg("-c")
