@@ -33,6 +33,7 @@ fn main() {
         let p_tbl = plugin.as_table().unwrap();
         let name = p_tbl.get("name").unwrap().as_str().unwrap();
         let repo = p_tbl.get("repo").unwrap().as_str().unwrap();
+
         let mut path = PathBuf::new();
         path.push(vundle_dir);
         path.push(name);
