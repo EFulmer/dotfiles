@@ -1,5 +1,5 @@
 # plugin_cmds.toml
-vundle_dir = "~/.vim/bundle/"
+vundle_dir = "/Users/eric/.vim/bundle/"
 command = "git clone"
 
 [[plugin]]
@@ -9,3 +9,7 @@ repo = "https://github.com/rust-lang/rust.vim.git"
 [[plugin]]
 name = "vim-colors-solarized"
 repo = "git://github.com/altercation/vim-colors-solarized.git"
+
+[[plugin]]
+name = "supertab"
+repo = "https://github.com/ervandew/supertab.git"
