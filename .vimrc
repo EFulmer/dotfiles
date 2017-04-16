@@ -30,7 +30,6 @@ set autoindent   " Default indentation strategy: automatically indent new lines 
 set tabstop=4    " Each <TAB> character in a file is displayed as 4 spaces.
 set shiftwidth=4 " Each indentation level indents code 4 spaces further to the left.
 set smarttab
-set smartindent
 
 "" Code folding:
 set foldmethod=indent " When folding a part of a file away, what defines a "part" is determined by indentation (or line with the same spaces).
@@ -63,15 +62,11 @@ au BufNewFile,BufRead *.py
     \ set shiftwidth=4 |
     \ set textwidth=79 | 
     \ set expandtab | 
-    \ set autoindent | 
-    \ set fileformat=unix 
+    " \ set autoindent | 
+    \ set fileformat=unix
 
 "" Rust-specific:
 " let g:rustfmt_autosave=1 " Automatically run rustfmt after every write of a Rust source buffer. " Commented out until I can get rustfmt working.
-
-"" OCaml-specific:
-let g:opamshare=substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" + g:opamshare + "/merlin/vim"
 
 " Rainbow parens:
 au VimEnter * RainbowParenthesesToggle
@@ -103,7 +98,7 @@ let g:rbpt_colorpairs = [
 set nowrap
 set modeline
 set showmode
-set tw=80
+" set tw=80
 set history=1000
 " set clipboard=unnamedplus,autoselect " TODO figure out why this does not work.
 set completeopt=menuone,menu,longest
@@ -159,3 +154,5 @@ noremap <leader>b<space> :CtrlPBuffer<cr>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
 
 " more other stuff
+" use JSX highlighting in .js files
+let g:jsx_ext_required = 0
