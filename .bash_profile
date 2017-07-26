@@ -25,7 +25,8 @@ export TERM=xterm-256color
 # export PS1="\[\e[1m\]\[\033[0;34m\]\u@\h:\w$ \[\033[0m\]\[\e[0m\]"
 # export PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u@\h\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\[\033[38;5;3m\][\w]\[$(tput sgr0)\]\[\033[38;5;14m\]\\$\[$(tput sgr0)\] "
 # export PS1="\[$(tput bold)\]\[\033[38;5;243m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;28m\] @ \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;6m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;3m\][\w]\[$(tput sgr0)\]\[\033[38;5;245m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-export PS1="\[$(tput bold)\]\[\033[38;5;243m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;28m\] at \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;6m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] in \[$(tput sgr0)\]\[\033[38;5;3m\]\w\[$(tput sgr0)\]\[\033[38;5;245m\]\\n\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+# export PS1="\[$(tput bold)\]\[\033[38;5;243m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;28m\] at \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;6m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] in \[$(tput sgr0)\]\[\033[38;5;3m\]\w\[$(tput sgr0)\]\[\033[38;5;245m\]\\n\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\]\[\033[38;5;125m\](\t)\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;243m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;28m\] at \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;6m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] in \[$(tput sgr0)\]\[\033[38;5;3m\]\w\[$(tput sgr0)\]\[\033[38;5;245m\] \n\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
  #set -o vi
 
@@ -40,3 +41,9 @@ export OPENSSL_INCLUDE_DIR=/usr/local/Cellar/openssl/1.0.2d_1/include/
 
 # virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
+
+# autocomplete for bash
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/Users/eric/anaconda/bin:$PATH"
