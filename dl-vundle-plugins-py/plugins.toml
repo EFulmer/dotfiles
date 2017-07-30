@@ -1,0 +1,65 @@
+# plugin_cmds.toml
+vundle_dir = "/Users/eric/.vim/bundle/"
+command = "git clone"
+
+[[plugin]]
+name = "rust.vim"
+repo = "https://github.com/rust-lang/rust.vim.git"
+
+[[plugin]]
+name = "vim-colors-solarized"
+repo = "git://github.com/altercation/vim-colors-solarized.git"
+
+[[plugin]]
+name = "supertab"
+repo = "https://github.com/ervandew/supertab.git"
+
+[[plugin]]
+name = "vim-toml"
+repo = "https://github.com/cespare/vim-toml.git"
+
+[[plugin]]
+name = "ctrlp.vim"
+
+[[plugin]]
+name = "deoplete.nvim"
+
+[[plugin]]
+name = "ghcmod-vim" 
+
+[[plugin]]
+name = "jedi-vim"
+
+[[plugin]]
+name = "neco-ghc"
+
+[[plugin]]
+name = "nerdcommenter"
+
+[[plugin]]
+name = "nerdtree"
+
+[[plugin]]
+name = "rainbow_parentheses.vim"
+
+[[plugin]]
+name = "syntastic"
+
+[[plugin]]
+name = "tabular"
+
+[[plugin]]
+name = "tlib_vim"
+
+[[plugin]]
+name = "vim-addon-mw-utils"
+
+[[plugin]]
+name = "vim-snipmate"
+
+[[plugin]]
+name = "vimproc.vim"
+
+[[plugin]]
+name = "vimwiki"
+repo = "https://github.com/vimwiki/vimwiki.git"
