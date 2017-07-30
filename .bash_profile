@@ -11,9 +11,8 @@ alias find-todos-py="grep -nr \"^.*#.*TODO.*$\""
 # some useful aliases
 alias ls="ls -GalT"
 alias ll=ls
-if [ `which nvim` ]
-then
-    alias vim=nvim
+if [ -x "$(command -v nvim)" ]; then
+  alias vim="$(command -v nvim)"
 fi
 
 # original XTERM
@@ -47,3 +46,4 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/eric/anaconda/bin:$PATH"
+
