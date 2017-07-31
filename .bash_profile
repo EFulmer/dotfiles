@@ -30,7 +30,7 @@ export PS1="\[$(tput bold)\]\[\033[38;5;125m\](\t)\[$(tput sgr0)\] \[$(tput bold
  #set -o vi
 
 # this is the most important line
-~/random-dril-tweet
+[ -f ~/random-dril-tweet ] && ~/random-dril-tweet
 
 # added by Anaconda2 4.1.1 installer
 export PATH="/Users/eric/anaconda/bin:$PATH"
@@ -39,7 +39,7 @@ export PATH="/Users/eric/anaconda/bin:$PATH"
 export OPENSSL_INCLUDE_DIR=/usr/local/Cellar/openssl/1.0.2d_1/include/
 
 # virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
+[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 
 # autocomplete for bash
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
