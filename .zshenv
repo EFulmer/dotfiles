@@ -12,5 +12,15 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# anaconda
+if [ -d "$HOME/anaconda3/bin" ]; then
+  export PATH="$HOME/anaconda3/bin:$PATH"
+fi
+
+# cargo
+if [ -d "$HOME/.cargo/bin" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # aliases
 alias ll="ls -alF"
