@@ -24,3 +24,5 @@ fi
 
 # aliases
 alias ll="ls -alF"
+alias gl="git log --oneline --graph --decorate"
+alias gs="git status"
