@@ -1,3 +1,11 @@
+# check whether linux or mac
+UNAME=$(uname -a)
+if [[ $UNAME == *"Linux"* ]]; then
+    OS='linux'
+else
+    OS='mac'
+fi
+
 export TERM="screen-256color"
 
 export EDITOR="vim"
@@ -7,16 +15,17 @@ export EDITOR="vim"
 #   export PYENV_ROOT="$HOME/.pyenv"
 #   export PATH="$PYENV_ROOT/bin:$PATH"
 #   eval "$(pyenv init -)"
-#   
+#
 #   # pyenv-virtualenv
 #   eval "$(pyenv virtualenv-init -)"
 # fi
 
 # anaconda
 # no longer needed for conda > 4.4?
-# if [ -d "$HOME/anaconda3/bin" ]; then
+if [ -d "$HOME/anaconda3/bin" ]; then
 #   export PATH="$HOME/anaconda3/bin:$PATH"
-# fi
+    . /home/eric/anaconda3/etc/profile.d/conda.sh
+fi
 
 # cargo
 if [ -d "$HOME/.cargo/bin" ]; then
@@ -43,4 +52,16 @@ alias gcm="git commit"
 alias grep="grep -n"
 alias find-todo-python="grep --include='*.py' -inr '#[[:blank:]+]TODO'"
 alias sa="source activate"
-. /home/eric/anaconda3/etc/profile.d/conda.sh
+
+alias ta='tmux attach-session -t'
+alias tl='tmux ls'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then
+    . '$HOME/google-cloud-sdk/path.zsh.inc';
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then
+    . '$HOME/google-cloud-sdk/completion.zsh.inc';
+fi

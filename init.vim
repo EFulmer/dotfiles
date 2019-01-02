@@ -24,12 +24,13 @@ if !filereadable(vimplug_exists)
 
   autocmd VimEnter * PlugInstall
 endif
-call plug#begin()
+call plug#begin(expand('~/.config/nvim/plugged'))
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree' " project sidebar
+Plug 'tpope/vim-surround'
 call plug#end()
 
 colorscheme solarized
@@ -39,3 +40,5 @@ let mapleader='\'
 
 set autoread " automatically reload open files on changes, i.e. from formatting tools
 au FocusGained,BufEnter * :checktime
+
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
