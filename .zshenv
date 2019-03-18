@@ -32,8 +32,23 @@ if [ -d "$HOME/.cargo/bin" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# kakoune
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# go
+if [ -d "/usr/local/go/bin" ]; then
+    export PATH="/usr/local/go/bin:$PATH"
+fi
+
+# ~/bin folder
+if [ -d "$HOME/bin" ]; then
+    export PATH="$HOME/bin:$PATH"
+fi
+
 # aliases
-alias ll="ls -al --color"
+alias ll="ls -ahl --color"
 alias l="ll"
 alias gl="git log --oneline --graph --decorate"
 alias gs="git status"
@@ -52,9 +67,9 @@ alias gcm="git commit"
 alias grep="grep -n"
 alias find-todo-python="grep --include='*.py' -inr '#[[:blank:]+]TODO'"
 alias sa="source activate"
-
 alias ta='tmux attach-session -t'
 alias tl='tmux ls'
+
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then
@@ -65,3 +80,6 @@ fi
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then
     . '$HOME/google-cloud-sdk/completion.zsh.inc';
 fi
+
+# this is a testing line for now, to test that we can use the Konnekt GKE cluster locally.
+export KUBECONFIG="/home/eric/code/projects/konnekt-infrastructure/kubeconfig/konnekt-playground/konnekt-dev/paidsearch-dev/dev.yaml"
