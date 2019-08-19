@@ -31,7 +31,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree' " project sidebar
 Plug 'tpope/vim-surround'
+" need to run `pip3 install pynvim` for deoplete; to enable python 3 scripting (I think?)
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 colorscheme solarized
 set background=dark
