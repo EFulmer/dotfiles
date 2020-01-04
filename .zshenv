@@ -10,31 +10,19 @@ export TERM="screen-256color"
 
 export EDITOR="vim"
 
-# # pyenv config below
-# if [ -d "$HOME/.pyenv" ]; then
-#   export PYENV_ROOT="$HOME/.pyenv"
-#   export PATH="$PYENV_ROOT/bin:$PATH"
-#   eval "$(pyenv init -)"
-#
-#   # pyenv-virtualenv
-#   eval "$(pyenv virtualenv-init -)"
-# fi
+# pyenv config below
+if [ -d "$HOME/.pyenv" ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
 
-# anaconda
-# no longer needed for conda > 4.4?
-if [ -d "$HOME/anaconda3/bin" ]; then
-#   export PATH="$HOME/anaconda3/bin:$PATH"
-    . /home/eric/anaconda3/etc/profile.d/conda.sh
+  # pyenv-virtualenv
+  eval "$(pyenv virtualenv-init -)"
 fi
 
 # cargo
 if [ -d "$HOME/.cargo/bin" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-# kakoune
-if [ -d "$HOME/.local/bin" ]; then
-  export PATH="$HOME/.local/bin:$PATH"
 fi
 
 # go
@@ -72,13 +60,13 @@ alias tl='tmux ls'
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then
-    . '$HOME/google-cloud-sdk/path.zsh.inc';
+if test -f $HOME/google-cloud-sdk/path.zsh.inc; then
+    source $HOME/google-cloud-sdk/path.zsh.inc;
 fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then
-    . '$HOME/google-cloud-sdk/completion.zsh.inc';
+if test -f $HOME/google-cloud-sdk/completion.zsh.inc; then
+    source $HOME/google-cloud-sdk/completion.zsh.inc;
 fi
 
 # this is a testing line for now, to test that we can use the Konnekt GKE cluster locally.
