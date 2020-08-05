@@ -20,6 +20,11 @@ if [ -d "$HOME/.pyenv" ]; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# poetry
+if [ -d "$HOME/.poetry/bin" ]; then
+    export PATH="$HOME/.poetry/bin:$PATH"
+fi
+
 # cargo
 if [ -d "$HOME/.cargo/bin" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
@@ -67,6 +72,12 @@ fi
 # The next line enables shell command completion for gcloud.
 if test -f $HOME/google-cloud-sdk/completion.zsh.inc; then
     source $HOME/google-cloud-sdk/completion.zsh.inc;
+fi
+
+# bat (https://github.com/sharkdp/bat)
+if [ `command -v batcat` ]; then
+    # TODO check that bat doesn't exist already
+    alias bat=batcat
 fi
 
 # this is a testing line for now, to test that we can use the Konnekt GKE cluster locally.
