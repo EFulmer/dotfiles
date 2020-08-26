@@ -79,6 +79,3 @@ if [ `command -v batcat` ]; then
     # TODO check that bat doesn't exist already
     alias bat=batcat
 fi
-
-# this is a testing line for now, to test that we can use the Konnekt GKE cluster locally.
-export KUBECONFIG="/home/eric/code/projects/konnekt-infrastructure/kubeconfig/konnekt-playground/konnekt-dev/paidsearch-dev/dev.yaml"
