@@ -1,4 +1,6 @@
 # to be put in /usr/share/applications/spotify.desktop
+# or /snap/spotify/current/usr/share/spotify/spotify.desktop
+# or /var/lib/snapd/desktop/applications/spotify_spotify.desktop
 [Desktop Entry]
 Type=Application
 Name=Spotify
