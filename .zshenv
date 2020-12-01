@@ -62,6 +62,8 @@ alias find-todo-python="grep --include='*.py' -inr '#[[:blank:]+]TODO'"
 alias sa="source activate"
 alias ta='tmux attach-session -t'
 alias tl='tmux ls'
+# something stupid that entertains me
+alias exeunt='exit'
 
 
 # The next line updates PATH for the Google Cloud SDK.
