@@ -45,6 +45,7 @@ alias ll="ls -ahl --color"
 alias l="ll"
 alias gl="git log --oneline --graph --decorate"
 alias gs="git status"
+alias gri="git rebase -i"
 # neovim
 if [ `command -v nvim` ]; then
         vim_command="nvim"
