@@ -40,13 +40,20 @@ if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
 
-# aliases
+## Aliases:
 alias ll="ls -ahl --color"
 alias l="ll"
+
+# Git aliases:
+alias gaa="git add -A"
+alias gcm="git commit"
+alias gcam="git commit -a -m"
 alias gl="git log --oneline --graph --decorate"
 alias gs="git status"
 alias gri="git rebase -i"
 alias gpf="git push --force"
+
+# Vim aliases:
 # neovim
 if [ `command -v nvim` ]; then
         vim_command="nvim"
@@ -57,13 +64,14 @@ alias vim=$vim_command
 alias vi=$vim_command
 alias nv=$vim_command
 alias v=$vim_command
-alias gaa="git add -A"
-alias gcm="git commit"
 alias grep="grep -n"
 alias find-todo-python="grep --include='*.py' -inr '#[[:blank:]+]TODO'"
 alias sa="source activate"
+
+# Tmux aliases:
 alias ta='tmux attach-session -t'
 alias tl='tmux ls'
+
 # something stupid that entertains me
 alias exeunt='exit'
 
