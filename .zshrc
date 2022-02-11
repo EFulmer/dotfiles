@@ -97,5 +97,3 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f ~/.zshenv ] && source ~/.zshenv
-
-export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_password.txt
