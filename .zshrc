@@ -93,7 +93,46 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# fzf integration
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_password.txt
 
-[ -f ~/.zshenv ] && source ~/.zshenv
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+# bat (https://github.com/sharkdp/bat)
+if [ `command -v batcat` ]; then
+    # TODO check that bat doesn't exist already
+    alias bat=batcat
+fi
+
+## Aliases:
+alias ll="ls -ahl"
+alias l="ll"
+
+# Git aliases:
+alias gaa="git add -A"
+alias gcm="git commit"
+alias gcam="git commit -a -m"
+alias gs="git status"
+alias gri="git rebase -i"
+alias gpf="git push --force"
+alias gl="git log --oneline --graph --decorate"
+
+# Vim aliases:
+# neovim
+if [ `command -v nvim` ]; then
+        vim_command="nvim"
+else
+        vim_command="vim"
+fi
+alias vim=$vim_command
+alias vi=$vim_command
+alias nv=$vim_command
+alias v=$vim_command
+alias grep="grep -n"
+alias find-todo-python="grep --include='*.py' -inr '#[[:blank:]+]TODO'"
+alias sa="source activate"
+
+# Tmux aliases:
+alias ta='tmux attach-session -t'
+alias tl='tmux ls'
+
+# something stupid that entertains me
+alias exeunt='exit'
