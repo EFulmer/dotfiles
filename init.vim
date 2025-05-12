@@ -2,6 +2,7 @@ set nocompatible
 set ruler
 set number
 
+
 " Search options
 set incsearch " searching as you type, no need to press enter
 set hlsearch " highlight search string
@@ -31,15 +32,16 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree' " project sidebar
 Plug 'tpope/vim-surround'
+Plug 'luochen1990/rainbow'
 " need to run `pip3 install pynvim` for deoplete; to enable python 3 scripting (I think?)
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-
-colorscheme solarized
-set background=dark
+" rainbow parens
+let g:rainbow_active = 1
+colorscheme retrobox
 
 let mapleader='\'
 
@@ -47,3 +49,4 @@ set autoread " automatically reload open files on changes, i.e. from formatting 
 au FocusGained,BufEnter * :checktime
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
