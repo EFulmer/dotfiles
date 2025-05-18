@@ -8,6 +8,8 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
+# amuse
+ZSH_THEME="amuse"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -136,3 +138,279 @@ alias tl='tmux ls'
 
 # something stupid that entertains me
 alias exeunt='exit'
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
