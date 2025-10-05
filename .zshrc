@@ -91,17 +91,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.zshenv
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
-export GPG_TTY=$(tty)
-
-export GPG_TTY=$(tty)
-
-export GPG_TTY=$(tty)
-
-export GPG_TTY=$(tty)
-
-export GPG_TTY=$(tty)
-
-export GPG_TTY=$(tty)
