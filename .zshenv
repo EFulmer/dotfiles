@@ -1,4 +1,4 @@
-# check whether linux or mac
+# Check whether we are on Linux or macOS:
 UNAME=$(uname -a)
 if [[ $UNAME == *"Linux"* ]]; then
     OS='linux'
@@ -6,46 +6,94 @@ else
     OS='mac'
 fi
 
+# Some defaults:
 export TERM="screen-256color"
-
 export EDITOR="vim"
 
-# poetry
-if [ -d "$HOME/.poetry/bin" ]; then
-    export PATH="$HOME/.poetry/bin:$PATH"
+# Initializations, autocompletes, etc. for various programs / programming languages / PL environment managers / etc.:
+## homebrew
+if [ -d "/opt/homebrew" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# cargo
-if [ -d "$HOME/.cargo/bin" ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
+## Rust / Cargo
+if [ -d "$HOME/.cargo" ]; then
+  # export PATH="$HOME/.cargo/bin:$PATH"
+  . "$HOME/.cargo/env"
 fi
 
-# go
+## Golang
 if [ -d "/usr/local/go/bin" ]; then
     export PATH="/usr/local/go/bin:$PATH"
 fi
 
-# ~/bin folder
+## ~/bin folder
 if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
 
-# pyenv
+## ~/.local/bin folder
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+## pyenv
 if [ -d "$HOME/.pyenv/bin" ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
-## Aliases:
+## Ruby/rbenv
+if which rbenv > /dev/null 2>&1; then
+    eval "$(rbenv init - zsh)"
+fi
+
+## Google Cloud SDK:
+### $PATH update:
+if test -f $HOME/google-cloud-sdk/path.zsh.inc; then
+    source $HOME/google-cloud-sdk/path.zsh.inc;
+fi
+### Shell autocompletion:
+if test -f $HOME/google-cloud-sdk/completion.zsh.inc; then
+    source $HOME/google-cloud-sdk/completion.zsh.inc;
+fi
+
+## bat (https://github.com/sharkdp/bat)
+if [ `command -v batcat` ]; then
+    # TODO check that bat doesn't exist already
+    alias bat=batcat
+fi
+
+## fzf (https://github.com/junegunn/fzf)
+if [ `command -v fzf` ]; then
+    source <(fzf --zsh)
+fi
+
+## GPG
+# if [ -r ~/.zshrc ];
+#   then echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zshrc; \
+#   else echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zprofile;
+# fi
+
+## iTerm2 shell integration:
+if [ "$OS"=='mac' ]; then
+    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+fi
+
+# End initializations / autocompletes / $PATH updates / etc.
+
+# Aliases:
+## General:
 if [ "$OS"=='mac' ]; then
     alias ll="ls -Gal" # mac
+    alias tmux="tmux -CC"
 else
     alias ll="ls -ahl --color" # linux
 fi
 alias l="ll"
 
-# Git aliases:
+## Git aliases:
 alias gaa="git add -A"
 alias gcm="git commit"
 alias gcam="git commit -a -m"
@@ -73,21 +121,10 @@ alias sa="source activate"
 alias ta='tmux attach-session -t'
 alias tl='tmux ls'
 
-# something stupid that entertains me
+# Something stupid that entertains me
 alias exeunt='exit'
+# End aliases.
 
-# The next line updates PATH for the Google Cloud SDK.
-if test -f $HOME/google-cloud-sdk/path.zsh.inc; then
-    source $HOME/google-cloud-sdk/path.zsh.inc;
-fi
-
-# The next line enables shell command completion for gcloud.
-if test -f $HOME/google-cloud-sdk/completion.zsh.inc; then
-    source $HOME/google-cloud-sdk/completion.zsh.inc;
-fi
-
-# bat (https://github.com/sharkdp/bat)
-if [ `command -v batcat` ]; then
-    # TODO check that bat doesn't exist already
-    alias bat=batcat
-fi
+# TODO explain
+# PyArrow
+export OPENSSL_ROOT_DIR="/opt/homebrew/Cellar/openssl@3/3.0.1"
