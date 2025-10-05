@@ -8,7 +8,6 @@ fi
 
 # Some defaults:
 export TERM="screen-256color"
-export EDITOR="vim"
 
 # Initializations, autocompletes, etc. for various programs / programming languages / PL environment managers / etc.:
 ## homebrew
@@ -114,6 +113,8 @@ alias vim=$vim_command
 alias vi=$vim_command
 alias nv=$vim_command
 alias v=$vim_command
+export EDITOR=$vim_command
+
 alias grep="grep -n"
 alias find-todo-python="grep --include='*.py' -inr '#[[:blank:]+]TODO'"
 alias sa="source activate"
