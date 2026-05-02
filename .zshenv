@@ -87,7 +87,6 @@ fi
 ## General:
 if [ "$OS"=='mac' ]; then
     alias ll="ls -Gal" # mac
-    alias tmux="tmux -CC"
 else
     alias ll="ls -ahl --color" # linux
 fi
